@@ -9,7 +9,7 @@ class CustomButton extends StatelessWidget {
   final bool? isExpand;
   final Color? color;
   final String icons;
-  final VoidCallback? onPressed;
+  final VoidCallback onPressed;
   final bool isCloseKeyboardAfterClick;
 
   const CustomButton({
@@ -26,8 +26,8 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
         onTap: () {
-          if (isCloseKeyboardAfterClick) FocusScope.of(context).unfocus();
-          onPressed!();
+          // if (isCloseKeyboardAfterClick) FocusScope.of(context).unfocus();
+          onPressed();
         },
         child: Container(
             padding: const EdgeInsets.all(8),
